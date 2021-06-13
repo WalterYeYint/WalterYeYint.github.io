@@ -300,12 +300,6 @@ input, select, textarea {
 		text-align: right;
 	}
 
-	.center {
-		margin-left: auto;
-		margin-right: auto;
-		display: block
-	}
-
 /* Form */
 
 	form {
@@ -1342,11 +1336,11 @@ input, select, textarea {
 			}
 
 		#header nav ul {
-			display: -moz-flex;
+			/* display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
-			display: flex;
-			margin-bottom: 0;
+			display: flex; */
+			margin-bottom: 1;
 			list-style: none;
 			padding-left: 0;
 			border: solid 1px #ffffff;
@@ -1365,7 +1359,7 @@ input, select, textarea {
 				#header nav ul li a {
 					display: block;
 					min-width: 7.5rem;
-					height: 2.75rem;
+					min-height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.45rem;
 					text-transform: uppercase;
@@ -1382,7 +1376,7 @@ input, select, textarea {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
 
-		#header nav.use-middle:after {
+		/* #header nav.use-middle:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -1391,7 +1385,7 @@ input, select, textarea {
 			width: 1px;
 			height: 100%;
 			background: #ffffff;
-		}
+		} */
 
 		#header nav.use-middle ul li.is-middle {
 			border-left: 0;
