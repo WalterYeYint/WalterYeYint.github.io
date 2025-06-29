@@ -1450,20 +1450,6 @@ input, select, textarea {
 					z-index: 2;
 				}
 
-				/* Tier-based color coding for navigation items */
-				#header nav ul li:nth-child(1) { --item-color: var(--tier-ex); }
-				#header nav ul li:nth-child(2) { --item-color: var(--tier-0); }
-				#header nav ul li:nth-child(3) { --item-color: var(--tier-1); }
-				#header nav ul li:nth-child(4) { --item-color: var(--tier-2); }
-				#header nav ul li:nth-child(5) { --item-color: var(--tier-3); }
-				#header nav ul li:nth-child(6) { --item-color: var(--tier-4); }
-				#header nav ul li:nth-child(7) { --item-color: var(--tier-5); }
-				#header nav ul li:nth-child(8) { --item-color: var(--tier-n); }
-				#header nav ul li:nth-child(9) { --item-color: var(--tier-ex); }
-				#header nav ul li:nth-child(10) { --item-color: var(--tier-0); }
-				#header nav ul li:nth-child(11) { --item-color: var(--tier-1); }
-				#header nav ul li:nth-child(12) { --item-color: var(--tier-2); }
-
 				#header nav ul li:before {
 					content: '';
 					position: absolute;
@@ -1918,4 +1904,22 @@ input, select, textarea {
 
 		body.is-preload #footer {
 			opacity: 0;
+		}
+
+		/* Dynamic navigation colors - automatically cycles through colors */
+		#header nav ul li:nth-child(8n+1) { --item-color: var(--tier-ex); }
+		#header nav ul li:nth-child(8n+2) { --item-color: var(--tier-0); }
+		#header nav ul li:nth-child(8n+3) { --item-color: var(--tier-1); }
+		#header nav ul li:nth-child(8n+4) { --item-color: var(--tier-2); }
+		#header nav ul li:nth-child(8n+5) { --item-color: var(--tier-3); }
+		#header nav ul li:nth-child(8n+6) { --item-color: var(--tier-4); }
+		#header nav ul li:nth-child(8n+7) { --item-color: var(--tier-5); }
+		#header nav ul li:nth-child(8n+0) { --item-color: var(--tier-n); }
+
+		/* Smaller images for MLOps pipeline */
+		.mlops-image {
+			width: 70% !important;
+			height: auto !important;
+			margin: 20px auto !important;
+			display: block !important;
 		}
