@@ -39,7 +39,9 @@
 						</div>
 						<nav>
 							<ul>
+								<li><a href="#MultiAgentFinanceRisk">Multi-Agent AI System for Company Finance Risk Analysis</a></li>
 								<li><a href="#TextWorld">Navigating Textual Environments through Reinforcement Learning in TextWorld Game</a></li>
+								<!-- <li><a href="#MultiReward_Math_Reasoning">Improving Math Reasoning of LLMs via Multi-Reward RL</a></li> -->
 								<li><a href="#SonicJob">SonicJob: Job/Candidate Matching & Recommendation System</a></li>
 								<li><a href="#PPEDetector">Personal Protective Equipment Detection System</a></li>
 								<li><a href="#AUSImportExport">Analyzing and Visualizing Australia's Import & <br/>Export Data</a></li>
@@ -78,27 +80,50 @@
 
 				<!-- Main -->
 					<div id="main">
-						<!-- TextWorld -->
-						<article id="TextWorld">
-							<h2 class="major">Navigating Textual Environments through Reinforcement Learning in TextWorld Game</h2>
-							<iframe width="100%" height="400" src="https://www.youtube.com/embed/HhzEbOtBR0M" 
-									title="TextWorld Reinforcement Learning Demo" frameborder="0" 
+						<!-- MultiAgentFinanceRisk-->
+						<article id="MultiAgentFinanceRisk">
+							<h2 class="major">Multi-Agent AI System for Company Finance Risk Analysis</h2>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/uUxpRscA9CE" 
+									title="Multi-Agent AI System for Company Finance Risk Analysis" frameborder="0" 
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 									allowfullscreen>
 							</iframe>
 							<p>&emsp;The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81.
 							</p>
-							<span class="image main"><img class="mlops-image" src="images/MLOps_pipeline_1.png" alt="" /></span>
-							<span class="image main"><img class="mlops-image" src="images/MLOps_pipeline_2.png" alt="" /></span>
+						</article>
+
+						<!-- TextWorld -->
+						<article id="TextWorld">
+							<h2 class="major">Navigating Textual Environments through Reinforcement Learning in TextWorld Game</h2>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/g5qL34-JdiY" 
+									title="Navigating Textual Environments through Reinforcement Learning in TextWorld Game" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
+							<p>&emsp;Microsoft’s TextWorld is a text-based platform designed for benchmarking intelligent agents that combine natural language understanding with sequential decision-making. We investigated how Reinforcement Learning (RL) techniques can be applied to the Cooking Game, a TextWorld scenario where the agent must interpret textual descriptions and perform cooking-related tasks to achieve specific goals. We experimented with two Reinforcement Learning paradigms, Actor-Critic and Deep Q-Network (DQN), and two text encoding architectures, GRU and LSTM to address key challenges inherent to interactive text games, such as partial observability and sparse reward signals. The experimental results demonstrate that our trained agents can efficiently complete the Easy, Medium, and Hard levels, indicating the effectiveness of our application to acquire and generalize complex sequential decision-making skills in text-based environments.
+							</p>
+						</article>
+
+						<!-- MultiReward_Math_Reasoning -->
+						<article id="MultiReward_Math_Reasoning">
+							<h2 class="major">Improving Math Reasoning of LLMs via Multi-Reward RL</h2>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/c3sdV6T45jQ" 
+									title="Improving Math Reasoning of LLMs via Multi-Reward RL" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
+							<p>&emsp;The goal of this project is to enhance mathematical reasoning capability of LLMs using a two-stage fine-tuning pipeline: initial Supervised Fine-Tuning (SFT) on high-quality Chain-of-Thought (CoT) traces, followed by GRPO with a multi-reward system. SFT will first aligns base models to produce basic structured reasoning steps enclosed in <THINK> and <SOLUTION> tags to ensure step-by-step interpretability. GRPO, a model-free on-policy reinforcement learning algorithm, will then further optimizes the models with 4 specialized rewards, including strict and partial structural format adherence, numerical correctness and number extraction ability. Experiments were conducted with 3 foundational models, Qwen3-1.7B-Base, Llama-3.2-1B, and Llama-3.2-3B, which are trained using LoRA (Low Rank Adaptation), an efficient adaptation for parameter and resource efficiency. Evaluation on the benchmark GSM8K dataset showed significant performance improvements when employing our pipeline compared to when using base models, with Qwen3-1.7B-Base achieving 99% correct format and 76.88% correct answers. The results confirm that multi-reward GRPO training with structured reasoning can enhance interpretability, reasoning reliability and numeric accuracy in computationally efficient models.
+							</p>
 						</article>
 
 						<!-- SonicJob -->
 						<article id="SonicJob">
 							<h2 class="major">Sonic Job: AI Job Assisting Platform</h2>
-							 <video controls>
-								<source src="videos/SonicJob.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-							</video>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vru72y6XFks" 
+									title="Sonic Job: AI Job Assisting Platform" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
 							<p>&emsp;The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81.
 							</p>
 							<span class="image main"><img class="mlops-image" src="images/MLOps_pipeline_1.png" alt="" /></span>
@@ -141,10 +166,11 @@
 							<article id="FoodOrdering">
 								<h2 class="major">Online Food Ordering Web-App with Recommendation System</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<video controls>
-									<source src="videos/Ye Yint Thu - 001243529Video Demonstration.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/B8PQDUpEVEI" 
+										title="Online Food Ordering Web-App with Recommendation System" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>&emsp;The video shows the online food ordering web-app prototype with K-Nearest Neighbors model for recommendation. It demonstrates how to use the customer website and admin panel.</p>
 							</article>
 						
@@ -152,10 +178,11 @@
 							<article id="LogoDefect">
 								<h2 class="major">Logo Defect Detection System</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<video controls>
-									<source src="videos/test_result_brightness_2.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/8KtrFRpd3X0" 
+										title="Logo Defect Detection System" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>&emsp;The video shows the demonstration of logo defect detection using OpenCV. The logo without defects are shown in green boxes, and those with defects are shown in red boxes.</p>
 							</article>
 						
@@ -163,10 +190,11 @@
 							<article id="WrinkleDefect">
 								<h2 class="major">Wrinkle Defect Detection System</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<video controls>
-									<source src="videos/Wrinkle_Detection_Adjust_Sensitivity.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/teupHDE_P4k" 
+										title="Wrinkle Defect Detection System" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>&emsp;The video shows the demonstration of wrinkle defect detection using OpenCV. The wrinkles and other defects on a paper are filtered and shown in red, and sensitivity and other parameters can be adjusted using keyboard keys.</p>
 							</article>
 						
@@ -184,24 +212,33 @@
 									with Lane Centering Assist &
 									Traffic Sign Detection</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<video controls>
-									<source src="videos/Five_Signs_Test_Done.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>
-								<video controls>
-									<source src="videos/Five_Signs_Test_Done(FPV).m4v" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/Jsps1qxy6_8" 
+										title="Autonomous Vehicle
+									with Lane Centering Assist &
+									Traffic Sign Detection" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/24T9YcO2jx4" 
+										title="Autonomous Vehicle
+									with Lane Centering Assist &
+									Traffic Sign Detection(FPV)" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>&emsp;The videos show the autonomous navigation of the vehicle prototype on a lane and how it acts according to different traffic signs. Lane following was done using OpenCV, the wheel speeds and direction were controlled using PID algorithms and traffic sign detection was done using SSD-MobileNet-V2 Tensorflow Object Detection API. The traffic sign detection was run on a remote PC for real-time traffic sign detection.</p>
 							</article>
 
 						<!-- Sudoku -->
 							<article id="Sudoku">
 								<h2 class="major">Python Sudoku Solver <br/>using Keras and OCR</h2>
-								<video controls>
-									<source src="videos/Peek 2024-09-02 10-42.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/nSbyHW3ybs0" 
+										title="Autonomous Vehicle
+									with Lane Centering Assist &
+									Traffic Sign Detection(FPV)" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>&emsp;The video shows the demonstration of Python Sudoku Solver. A custom digit classifier model was trained using tensorflow keras. The sudoku was solved using Python sudoku library.
 								</p>
 							</article>
@@ -221,38 +258,43 @@
 						<!-- House_Lights -->
 							<article id="House_Lights">
 								<h2 class="major">IoT House Lights Automation System</h2>
-								<video controls>
-									<source src="videos/IoT_House_Lights.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>
-								<video controls>
-									<source src="videos/IoT_House_Light (Sinric).mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/Y7Y_E5RXiaM" 
+										title="IoT House Lights Automation System" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
+								<iframe width="100%" height="400" src="https://www.youtube.com/embed/UAhf2GE4urs" 
+										title="IoT House Lights Automation System" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+								</iframe>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
 						
 						<!-- Entrance_Lights -->
 						<article id="Entrance_Lights">
 							<h2 class="major">Automatic Entrance Light System</h2>
-							<video controls>
-								<source src="videos/Automatic_Entrance_Light.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							</video>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/CtnlRslImYs" 
+									title="Automatic Entrance Light System" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
 							<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 						</article>
 
 						<!-- Surveillance -->
 						<article id="Surveillance">
 							<h2 class="major">IoT Surveillance System using OpenCV</h2>
-							<video controls>
-								<source src="videos/IoT_Surveillance(Final_Demo).mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							</video>
-							<video controls>
-								<source src="videos/IoT_Surveillance(Filter_Tests).mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							</video>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/Y8kIUJrMr" 
+									title="IoT Surveillance System using OpenCV" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/h3N6jMATa7U" 
+									title="IoT Surveillance System using OpenCV" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
 							<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 						</article>
 
