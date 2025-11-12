@@ -39,6 +39,7 @@
 						</div>
 						<nav>
 							<ul>
+								<li><a href="#TextWorld">Navigating Textual Environments through Reinforcement Learning in TextWorld Game</a></li>
 								<li><a href="#SonicJob">SonicJob: Job/Candidate Matching & Recommendation System</a></li>
 								<li><a href="#PPEDetector">Personal Protective Equipment Detection System</a></li>
 								<li><a href="#AUSImportExport">Analyzing and Visualizing Australia's Import & <br/>Export Data</a></li>
@@ -77,6 +78,19 @@
 
 				<!-- Main -->
 					<div id="main">
+						<!-- TextWorld -->
+						<article id="TextWorld">
+							<h2 class="major">Navigating Textual Environments through Reinforcement Learning in TextWorld Game</h2>
+							<iframe width="100%" height="400" src="https://www.youtube.com/embed/HhzEbOtBR0M" 
+									title="TextWorld Reinforcement Learning Demo" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+							</iframe>
+							<p>&emsp;The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81.
+							</p>
+							<span class="image main"><img class="mlops-image" src="images/MLOps_pipeline_1.png" alt="" /></span>
+							<span class="image main"><img class="mlops-image" src="images/MLOps_pipeline_2.png" alt="" /></span>
+						</article>
 
 						<!-- SonicJob -->
 						<article id="SonicJob">
