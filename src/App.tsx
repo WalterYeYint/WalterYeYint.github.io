@@ -85,7 +85,7 @@ const cvData = {
     {
         "name": "Multi-Agent AI System for Company Finance Risk Analysis",
         "date": "Project",
-        "desc": "The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81."
+        "desc": "The demo video shows the developed app, which is built using the LangChain and LangGraph frameworks to orchestrate a sophisticated multi-agent system. It features specialized collaboration and debate workflows designed to simulate professional financial analysis. The system was implemented and tested using both OpenAI (GPT-4o) and local Ollama (Llama 3.2:3B) models. The architecture consists of several specialized agents, including fundamental, sentiment, valuation, risk, data, and writer agents. These agents interact through a structured collaboration process and a formal debate workflow. By challenging each other's conclusions and sharing data, they synthesize complex information to produce a definitive investment recommendation of buy, hold, or sell. Users can generate a comprehensive PDF risk report based on their specific input."
 ,
       "video": "https://www.youtube.com/embed/uUxpRscA9CE"    },
     {
@@ -106,26 +106,32 @@ const cvData = {
         "desc": "The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81."
 ,
       "video": "https://www.youtube.com/embed/Vru72y6XFks",
-      "image": "images/MLOps_pipeline_1.png"    },
+      "image": "images/MLOps_pipeline_1.png",
+      "image2": "images/MLOps_pipeline_2.png"    },
     {
         "name": "Personal Protective Equipment Detection System",
         "date": "Project",
-        "desc": "The demo link below shows the personal protective equipment detection system. It is implemented using YOLOv8 and hosted on a streamlit platform. The system is able to detect 9 different classes. User can upload desired image/video to detect these classes, or they can use their camera to detect them real-time. (Some latency exists for real-time detection)"
+        "desc": "The demo link below shows the personal protective equipment detection system. It is implemented using YOLOv8 and hosted on a streamlit platform. The system is able to detect 9 different classes. User can upload desired image/video to detect these classes, or they can use their camera to detect them real-time. (Some latency exists for real-time detection)",
+        "url": "https://kanyu-ppedetector.streamlit.app/",
+        "url_txt": "Link to PPE Detector"
     },
     {
         "name": "Analyzing and Visualizing Australia's Import & Export Data",
         "date": "Project",
-        "desc": "The document shows the analysis and visualization of Australia's Import & Export Data using Tableau."
+        "desc": "The document shows the analysis and visualization of Australia's Import & Export Data using Tableau.",
+        "doc": "documents/25422371_A3.pdf"
     },
     {
         "name": "Analyzing and Visualizing AUS Open Tennis dataset",
         "date": "Project",
-        "desc": "The document shows the analysis and visualization of AUS Open Tennis dataset using Tableau."
+        "desc": "The document shows the analysis and visualization of AUS Open Tennis dataset using Tableau.",
+        "doc": "documents/25422371_A2.pdf"
     },
     {
         "name": "Analyzing and Visualizing housing data of Penshurst, New South Wales",
         "date": "Project",
-        "desc": "The document shows the analysis and visualization of housing data of Penshurst, New South Wales using Microsoft Excel."
+        "desc": "The document shows the analysis and visualization of housing data of Penshurst, New South Wales using Microsoft Excel.",
+        "doc": "documents/25422371_A2.pdf"
     },
     {
         "name": "Online Food Ordering Web-App with Recommendation System",
@@ -150,13 +156,15 @@ const cvData = {
         "date": "Project",
         "desc": "This is a two-month group project at Omdena. The images shows how symbols and texts are recognized in Piping and Instrumentation Diagrams. I took part in developing object detection for symbols and text recognition models. The end product was developed using YOLOv5 and EasyOCR."
 ,
-      "image": "images/piping&instrumentation_1.jpg"    },
+      "image": "images/piping&instrumentation_1.jpg",
+      "image2": "images/piping&instrumentation_2.jpg"    },
     {
         "name": "Autonomous Vehicle with Lane Centering Assist & Traffic Sign Detection",
         "date": "Project",
         "desc": "The videos show the autonomous navigation of the vehicle prototype on a lane and how it acts according to different traffic signs. Lane following was done using OpenCV, the wheel speeds and direction were controlled using PID algorithms and traffic sign detection was done using SSD-MobileNet-V2 Tensorflow Object Detection API. The traffic sign detection was run on a remote PC for real-time traffic sign detection."
 ,
-      "video": "https://www.youtube.com/embed/Jsps1qxy6_8"    },
+      "video": "https://www.youtube.com/embed/Jsps1qxy6_8",
+      "video2": "https://www.youtube.com/embed/24T9YcO2jx4"    },
     {
         "name": "Python Sudoku Solver using Keras and OCR",
         "date": "Project",
@@ -166,7 +174,11 @@ const cvData = {
     {
         "name": "Khet Laser Chess Game using Python Flask",
         "date": "Project",
-        "desc": "The video shows the demonstration of Khet Laser Chess Game, a personal project developed using Python Flask. The goal of the game is to eliminate your opponent\u2019s Pharaoh by bouncing your laser beam off mirrored pieces and around the playing field. See the instruction manual by Thinkfun for more details."
+        "desc": "The video shows the demonstration of Khet Laser Chess Game, a personal project developed using Python Flask. The goal of the game is to eliminate your opponent\u2019s Pharaoh by bouncing your laser beam off mirrored pieces and around the playing field. See the instruction manual by Thinkfun below for more details."
+,        
+      "video": "https://www.youtube.com/embed/HhzEbOtBR0M",
+      "url": "https://www.thinkfun.com/wp-content/uploads/2017/10/LaserCh-1034-Instructions.pdf",
+      "url_txt": "Instruction manual by Thinkfun"
     }
 ],
   education: [
@@ -464,31 +476,47 @@ export default function App() {
                 <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">{selectedProject.name}</h2>
               </div>
               
-              {(selectedProject.video || selectedProject.image) && (
+              {selectedProject.video && (
                 <div className="w-full aspect-video bg-black/50 rounded-2xl overflow-hidden mb-8 relative border border-white/10">
-                  {selectedProject.video ? (
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={selectedProject.video}
-                      title="Project Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0"
-                    />
-                  ) : (
-                    <img 
-                      src={selectedProject.image} 
-                      alt={selectedProject.name}
-                      className="w-full h-full object-cover opacity-90"
-                    />
-                  )}
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={selectedProject.video}
+                    title="Project Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0"
+                  />
+                </div>)}
+              {selectedProject.video2 && (
+                <div className="w-full aspect-video bg-black/50 rounded-2xl overflow-hidden mb-8 relative border border-white/10">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={selectedProject.video2}
+                    title="Project Video 2"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0"
+                  />
                 </div>
               )}
               
               <div className="text-[#86868B] text-lg leading-relaxed font-light">
                 <p>{selectedProject.desc}</p>
+                <img 
+                  src={selectedProject.image}
+                  className="w-full h-full object-cover opacity-90"
+                />
+                <img 
+                  src={selectedProject.image2}
+                  className="w-full h-full object-cover opacity-90"
+                />
+                <u><a href={selectedProject.url}>{selectedProject.url_txt}</a></u>
+                {selectedProject.doc ? (
+                  <embed src={selectedProject.doc} type="application/pdf" width="100%" height="600px" />) : (<></>)}
               </div>
             </motion.div>
           </motion.div>
