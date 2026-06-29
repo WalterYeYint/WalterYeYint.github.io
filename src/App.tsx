@@ -83,11 +83,12 @@ const cvData = {
   ],
   projects: [
     {
-        "name": "Multi-Agent AI System for Company Finance Risk Analysis",
+        "name": "NimbusQuant: Multi-Agent Stock Analyzer",
         "date": "Project",
-        "desc": "The demo video shows the developed app, which is built using the LangChain and LangGraph frameworks to orchestrate a sophisticated multi-agent system. It features specialized collaboration and debate workflows designed to simulate professional financial analysis. The system was implemented and tested using both OpenAI (GPT-4o) and local Ollama (Llama 3.2:3B) models. The architecture consists of several specialized agents, including fundamental, sentiment, valuation, risk, data, and writer agents. These agents interact through a structured collaboration process and a formal debate workflow. By challenging each other's conclusions and sharing data, they synthesize complex information to produce a definitive investment recommendation of buy, hold, or sell. Users can generate a comprehensive PDF risk report based on their specific input."
-,
-      "video": "https://www.youtube.com/embed/uUxpRscA9CE"    },
+        "desc": "A production-grade multi-agent system for company finance risk analysis, deployed live at nimbusquant.tech. Built on LangGraph, it orchestrates six specialist LLM agents (data, fundamental, sentiment, valuation, risk, and writer) across two workflows: a parallel analysis chain, followed by a round-robin debate supervised by a debate manager, where agents challenge each other's conclusions to converge on a BUY / HOLD / SELL recommendation. Fundamental analysis is grounded in real SEC 10-K/10-Q filings through a Retrieval-Augmented Generation (RAG) pipeline over Postgres + pgvector, while live market data and news are pulled from the Polygon API. Since a full analysis takes minutes, an asynchronous worker queue runs it out of the request path with snapshot caching, keeping the UI responsive. The structured-output layer is engineered to run identically on OpenAI (GPT-4o), Anthropic, Google and small local models (Ollama Llama 3.2 3B). The full stack — React frontend, Flask backend, and worker — is deployed on AWS (ECS Express Mode + Fargate, Supabase Postgres, S3 + CloudFront) with split CI/CD GitHub Actions pipelines. Users can generate a comprehensive PDF risk report for any ticker.",
+        "url": "https://nimbusquant.tech/",
+        "url_txt": "Live Demo",
+      "video": "https://www.youtube.com/embed/wxcYEeBdRGU"    },
     {
         "name": "Navigating Textual Environments through Reinforcement Learning in TextWorld Game",
         "date": "Project",
