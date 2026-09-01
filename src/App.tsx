@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, Linkedin, Mail, Award, Monitor, MapPin, X, Database, Terminal, Cpu, Wrench } from 'lucide-react';
+import { Github, Linkedin, Mail, Award, Monitor, MapPin, X, Database, Terminal, Cpu, Wrench,
+         Bot, Gamepad2, Brain, Briefcase, HardHat, BarChart3, Home, UtensilsCrossed,
+         ScanEye, ScanLine, Workflow, Car, Grid3x3, Phone, ArrowRight, Trophy } from 'lucide-react';
 import { FaPython, FaCuttlefish, FaPhp, FaNodeJs, FaReact, FaDocker, FaAws, FaGitAlt, FaJira } from 'react-icons/fa';
 import { SiPytorch, SiTensorflow, SiOpencv, SiScikitlearn, SiPandas, SiDjango, SiFlask, SiFastapi, SiPostgresql, SiSqlite, SiMysql, SiArduino, SiRaspberrypi, SiGooglecloud, SiRos, SiCplusplus } from 'react-icons/si';
 import { clsx, type ClassValue } from 'clsx';
@@ -86,6 +88,7 @@ const cvData = {
   projects: [
     {
         "name": "NimbusQuant: Multi-Agent Stock Analyzer",
+        "icon": Bot,
         "date": "Project",
         "desc": "A production-grade multi-agent system for company finance risk analysis, deployed live at nimbusquant.tech. Built on LangGraph, it orchestrates six specialist LLM agents (data, fundamental, sentiment, valuation, risk, and writer) across two workflows: a parallel analysis chain, followed by a round-robin debate supervised by a debate manager, where agents challenge each other's conclusions to converge on a BUY / HOLD / SELL recommendation. Fundamental analysis is grounded in real SEC 10-K/10-Q filings through a Retrieval-Augmented Generation (RAG) pipeline over Postgres + pgvector, while live market data and news are pulled from the Polygon API. Since a full analysis takes minutes, an asynchronous worker queue runs it out of the request path with snapshot caching, keeping the UI responsive. The structured-output layer is engineered to run identically on OpenAI (GPT-4o), Anthropic, Google and small local models (Ollama Llama 3.2 3B). The full stack — React frontend, Flask backend, and worker — is deployed on AWS (ECS Express Mode + Fargate, Supabase Postgres, S3 + CloudFront) with split CI/CD GitHub Actions pipelines. Users can generate a comprehensive PDF risk report for any ticker.",
         "url": "https://nimbusquant.tech/",
@@ -93,18 +96,21 @@ const cvData = {
       "video": "https://www.youtube.com/embed/wxcYEeBdRGU"    },
     {
         "name": "Navigating Textual Environments through Reinforcement Learning in TextWorld Game",
+        "icon": Gamepad2,
         "date": "Project",
         "desc": "Microsoft\u2019s TextWorld is a text-based platform designed for benchmarking intelligent agents that combine natural language understanding with sequential decision-making. We investigated how Reinforcement Learning (RL) techniques can be applied to the Cooking Game, a TextWorld scenario where the agent must interpret textual descriptions and perform cooking-related tasks to achieve specific goals. We experimented with two Reinforcement Learning paradigms, Actor-Critic and Deep Q-Network (DQN), and two text encoding architectures, GRU and LSTM to address key challenges inherent to interactive text games, such as partial observability and sparse reward signals. The experimental results demonstrate that our trained agents can efficiently complete the Easy, Medium, and Hard levels, indicating the effectiveness of our application to acquire and generalize complex sequential decision-making skills in text-based environments."
 ,
       "video": "https://www.youtube.com/embed/g5qL34-JdiY"    },
     {
         "name": "Improving Math Reasoning of LLMs via Multi-Reward RL",
+        "icon": Brain,
         "date": "Project",
         "desc": "The goal of this project is to enhance mathematical reasoning capability of LLMs using a two-stage fine-tuning pipeline: initial Supervised Fine-Tuning (SFT) on high-quality Chain-of-Thought (CoT) traces, followed by GRPO with a multi-reward system. SFT will first aligns base models to produce basic structured reasoning steps enclosed in and tags to ensure step-by-step interpretability. GRPO, a model-free on-policy reinforcement learning algorithm, will then further optimizes the models with 4 specialized rewards, including strict and partial structural format adherence, numerical correctness and number extraction ability. Experiments were conducted with 3 foundational models, Qwen3-1.7B-Base, Llama-3.2-1B, and Llama-3.2-3B, which are trained using LoRA (Low Rank Adaptation), an efficient adaptation for parameter and resource efficiency. Evaluation on the benchmark GSM8K dataset showed significant performance improvements when employing our pipeline compared to when using base models, with Qwen3-1.7B-Base achieving 99% correct format and 76.88% correct answers. The results confirm that multi-reward GRPO training with structured reasoning can enhance interpretability, reasoning reliability and numeric accuracy in computationally efficient models."
 ,
       "video": "https://www.youtube.com/embed/c3sdV6T45jQ"    },
     {
         "name": "Sonic Job: AI Job Assisting Platform",
+        "icon": Briefcase,
         "date": "Project",
         "desc": "The demo video shows SonicJob app: an AI job assisting platform for both job seekers and recruiters. Job seekers can upload their resumes, get them analyzed and get most suitable jobs recommended to them. Similarly, recruiters can upload their job descriptions, candidates' CVs and get the most suitable candidates for that job. It was developed in 3 agile sprints. The system is implemented using Streamlit for frontend, Flask for backend. Job description data are scraped from LinkedIn on a daily basis. Different resume, job description datasets were preprocessed and standardized into one format. An end-to-end MLOps pipeline was created using ClearML as shown below (BERT, Roberta models were trained). Github Action was used for CI pipeline workflow that runs MLOps pipeline. The final Roberta model achieved overall F1 score of 0.81."
 ,
@@ -113,6 +119,7 @@ const cvData = {
       "image2": "images/MLOps_pipeline_2.png"    },
     {
         "name": "Personal Protective Equipment Detection System",
+        "icon": HardHat,
         "date": "Project",
         "desc": "The demo link below shows the personal protective equipment detection system. It is implemented using YOLOv8 and hosted on a streamlit platform. The system is able to detect 10 different classes. User can upload desired image/video to detect these classes, or they can use their camera to detect them real-time. (Some latency exists for real-time detection)",
         "url": "https://kanyu-ppedetector.streamlit.app/",
@@ -120,42 +127,49 @@ const cvData = {
     },
     {
         "name": "Analyzing and Visualizing Australia's Import & Export Data",
+        "icon": BarChart3,
         "date": "Project",
         "desc": "The document shows the analysis and visualization of Australia's Import & Export Data using Tableau.",
         "doc": "documents/25422371_A3.pdf"
     },
     {
         "name": "Analyzing and Visualizing AUS Open Tennis dataset",
+        "icon": Trophy,
         "date": "Project",
         "desc": "The document shows the analysis and visualization of AUS Open Tennis dataset using Tableau.",
         "doc": "documents/25422371_A2.pdf"
     },
     {
         "name": "Analyzing and Visualizing housing data of Penshurst, New South Wales",
+        "icon": Home,
         "date": "Project",
         "desc": "The document shows the analysis and visualization of housing data of Penshurst, New South Wales using Microsoft Excel.",
         "doc": "documents/25422371_A1.pdf"
     },
     {
         "name": "Online Food Ordering Web-App with Recommendation System",
+        "icon": UtensilsCrossed,
         "date": "Project",
         "desc": "The video shows the online food ordering web-app prototype with K-Nearest Neighbors model for recommendation. It demonstrates how to use the customer website and admin panel."
 ,
       "video": "https://www.youtube.com/embed/B8PQDUpEVEI"    },
     {
         "name": "Logo Defect Detection System",
+        "icon": ScanEye,
         "date": "Project",
         "desc": "The video shows the demonstration of logo defect detection using OpenCV. The logo without defects are shown in green boxes, and those with defects are shown in red boxes."
 ,
       "video": "https://www.youtube.com/embed/8KtrFRpd3X0"    },
     {
         "name": "Wrinkle Defect Detection System",
+        "icon": ScanLine,
         "date": "Project",
         "desc": "The video shows the demonstration of wrinkle defect detection using OpenCV. The wrinkles and other defects on a paper are filtered and shown in red, and sensitivity and other parameters can be adjusted using keyboard keys."
 ,
       "video": "https://www.youtube.com/embed/teupHDE_P4k"    },
     {
         "name": "Symbol and Text Recognition for Piping and Instrumentation Diagrams",
+        "icon": Workflow,
         "date": "Project",
         "desc": "This is a two-month group project at Omdena. The images shows how symbols and texts are recognized in Piping and Instrumentation Diagrams. I took part in developing object detection for symbols and text recognition models. The end product was developed using YOLOv5 and EasyOCR."
 ,
@@ -163,6 +177,7 @@ const cvData = {
       "image2": "images/piping&instrumentation_2.jpg"    },
     {
         "name": "Autonomous Vehicle with Lane Centering Assist & Traffic Sign Detection",
+        "icon": Car,
         "date": "Project",
         "desc": "The videos show the autonomous navigation of the vehicle prototype on a lane and how it acts according to different traffic signs. Lane following was done using OpenCV, the wheel speeds and direction were controlled using PID algorithms and traffic sign detection was done using SSD-MobileNet-V2 Tensorflow Object Detection API. The traffic sign detection was run on a remote PC for real-time traffic sign detection."
 ,
@@ -170,12 +185,14 @@ const cvData = {
       "video2": "https://www.youtube.com/embed/24T9YcO2jx4"    },
     {
         "name": "Python Sudoku Solver using Keras and OCR",
+        "icon": Grid3x3,
         "date": "Project",
         "desc": "The video shows the demonstration of Python Sudoku Solver. A custom digit classifier model was trained using tensorflow keras. The sudoku was solved using Python sudoku library."
 ,
       "video": "https://www.youtube.com/embed/nSbyHW3ybs0"    },
     {
         "name": "Khet Laser Chess Game using Python Flask",
+        "icon": Gamepad2,
         "date": "Project",
         "desc": "The video shows the demonstration of Khet Laser Chess Game, a personal project developed using Python Flask. The goal of the game is to eliminate your opponent\u2019s Pharaoh by bouncing your laser beam off mirrored pieces and around the playing field. See the instruction manual by Thinkfun below for more details."
 ,        
@@ -190,8 +207,7 @@ const cvData = {
       school: "University of Technology Sydney (UTS)",
       date: "Feb 2024 - Nov 2025",
       details: ["GPA: 6.69/7", "Dean's List 2025", "Post Graduate Academic Excellence Scholarship"]
-,
-      "video": "https://www.youtube.com/embed/HhzEbOtBR0M"    },
+    },
     {
       degree: "B.Sc (Computing) (Honours)",
       school: "University of Greenwich",
@@ -208,10 +224,10 @@ const cvData = {
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 16 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+    viewport={{ once: true, margin: "0px 0px 140px 0px" }}
+    transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
     className={className}
   >
     {children}
@@ -239,7 +255,7 @@ export default function App() {
         "fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent",
         scrolled ? "bg-[#000000]/70 backdrop-blur-xl border-white/5 py-4" : "py-6"
       )}>
-        <div className="max-w-6xl mx-auto px-6 h-full flex justify-between items-center text-[13px] font-medium tracking-wide">
+        <div className="max-w-5xl mx-auto px-6 h-full flex justify-between items-center text-[13px] font-medium tracking-wide">
           <motion.div initial={{ opacity:0, x: -10}} animate={{ opacity:1, x:0}} className="text-white flex items-center space-x-2 font-semibold tracking-tight text-lg">
             <span>Walter.YYT</span>
           </motion.div>
@@ -254,7 +270,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-32 flex-grow">
+      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-20 md:space-y-24 flex-grow">
         <section id="hero" className="min-h-[80vh] flex flex-col justify-center relative">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -303,9 +319,10 @@ export default function App() {
         <section id="experience" className="scroll-mt-32">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tight">Experience</h2>
-            <div className="relative space-y-8">
+          </FadeIn>
+          <div className="relative space-y-8">
               {cvData.experience.map((exp, i) => (
-                <FadeIn key={i} delay={i * 0.1} className="glass-card p-8 md:p-10">
+                <FadeIn key={i} delay={Math.min(i, 3) * 0.06} className="glass-card p-8 md:p-10">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-3">
                     <div>
                       <h3 className="text-xl md:text-2xl font-semibold text-white">{exp.role}</h3>
@@ -325,38 +342,44 @@ export default function App() {
                   </ul>
                 </FadeIn>
               ))}
-            </div>
-          </FadeIn>
+          </div>
         </section>
 
         <section id="projects" className="scroll-mt-32">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tight">Featured Projects</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {cvData.projects.map((project, i) => (
-                <FadeIn key={i} delay={i * 0.1}>
+          </FadeIn>
+          <div className="grid md:grid-cols-2 gap-6">
+              {cvData.projects.map((project, i) => {
+                const Icon = (project as any).icon ?? Monitor;
+                return (
+                <FadeIn key={i} delay={Math.min(i % 2, 1) * 0.06}>
                   <div onClick={() => setSelectedProject(project)} className="glass-card p-8 h-full flex flex-col cursor-pointer group">
-                    <div className="flex justify-between items-start mb-8">
+                    <div className="flex justify-between items-start mb-6">
                       <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-[#2997FF] group-hover:text-white transition-all duration-300 text-[#86868B]">
-                        <Monitor className="w-6 h-6" />
+                        <Icon className="w-6 h-6" />
                       </div>
                       <span className="text-xs font-medium text-[#86868B]">{project.date}</span>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 tracking-tight group-hover:text-[#2997FF] transition-colors">{project.name}</h3>
                     <p className="text-[#86868B] leading-relaxed flex-grow font-light">
-                      {project.desc.length > 120 ? project.desc.substring(0, 120) + "..." : project.desc}
+                      {project.desc.length > 230 ? project.desc.substring(0, 230).trimEnd() + "…" : project.desc}
                     </p>
+                    <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#2997FF] opacity-80 group-hover:opacity-100 transition-opacity">
+                      Read more <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    </span>
                   </div>
                 </FadeIn>
-              ))}
-            </div>
-          </FadeIn>
+                );
+              })}
+          </div>
         </section>
 
         <section id="skills" className="scroll-mt-32">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tight">Technical Skills</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+          </FadeIn>
+          <div className="grid md:grid-cols-2 gap-6">
               {cvData.skills.map((skillGroup, i) => (
                 <div key={i} className="glass-card p-8">
                   <h3 className="text-lg font-semibold text-white mb-8 flex items-center gap-3">
@@ -372,8 +395,7 @@ export default function App() {
                   </div>
                 </div>
               ))}
-            </div>
-          </FadeIn>
+          </div>
         </section>
 
         <section id="education" className="scroll-mt-32 grid md:grid-cols-2 gap-6">
@@ -427,7 +449,7 @@ export default function App() {
                    <span className="text-sm font-medium text-white">{cvData.email}</span>
                  </div>
                  <div className="flex flex-col items-center p-6 bg-white/5 rounded-3xl border border-white/5 transition-all hover:bg-white/10">
-                   <Monitor className="text-[#2997FF] mb-3" size={24} />
+                   <Phone className="text-[#2997FF] mb-3" size={24} />
                    <span className="text-sm font-medium text-white">{cvData.phone}</span>
                  </div>
                  <div className="flex flex-col items-center p-6 bg-white/5 rounded-3xl border border-white/5 transition-all hover:bg-white/10">
@@ -474,7 +496,7 @@ export default function App() {
               
               <div className="flex items-center gap-4 mb-8 pr-16 mt-2">
                 <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0">
-                  <Monitor className="text-[#2997FF] w-6 h-6" />
+                  {React.createElement(selectedProject.icon ?? Monitor, { className: "text-[#2997FF] w-6 h-6" })}
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">{selectedProject.name}</h2>
               </div>
@@ -507,19 +529,37 @@ export default function App() {
                 </div>
               )}
               
-              <div className="text-[#86868B] text-lg leading-relaxed font-light">
+              <div className="text-[#86868B] text-lg leading-relaxed font-light space-y-6">
                 <p>{selectedProject.desc}</p>
-                <img 
-                  src={selectedProject.image}
-                  className="w-full h-full object-cover opacity-90"
-                />
-                <img 
-                  src={selectedProject.image2}
-                  className="w-full h-full object-cover opacity-90"
-                />
-                <u><a href={selectedProject.url}>{selectedProject.url_txt}</a></u>
-                {selectedProject.doc ? (
-                  <embed src={selectedProject.doc} type="application/pdf" width="100%" height="600px" />) : (<></>)}
+                {selectedProject.image && (
+                  <img
+                    src={selectedProject.image}
+                    alt={`${selectedProject.name} screenshot`}
+                    loading="lazy"
+                    className="w-full rounded-2xl border border-white/10 opacity-90"
+                  />
+                )}
+                {selectedProject.image2 && (
+                  <img
+                    src={selectedProject.image2}
+                    alt={`${selectedProject.name} screenshot 2`}
+                    loading="lazy"
+                    className="w-full rounded-2xl border border-white/10 opacity-90"
+                  />
+                )}
+                {selectedProject.url && (
+                  <a
+                    href={selectedProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-[#2997FF] hover:underline text-base font-medium"
+                  >
+                    {selectedProject.url_txt ?? "Open link"} <ArrowRight className="w-4 h-4" />
+                  </a>
+                )}
+                {selectedProject.doc && (
+                  <embed src={selectedProject.doc} type="application/pdf" width="100%" height="600px" className="rounded-2xl border border-white/10" />
+                )}
               </div>
             </motion.div>
           </motion.div>
