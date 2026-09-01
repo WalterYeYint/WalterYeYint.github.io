@@ -13,13 +13,13 @@ function cn(...inputs: ClassValue[]) {
 const cvData = {
   name: "Ye Yint Thu (Walter)",
   title: "Software Engineer / AI Specialist",
-  tagline: "Engineer with 3+ years of AI, Software & Robotics Projects experience",
+  tagline: "Engineer with 4+ years of AI, Software & Robotics experience",
   email: "walteryeyint@gmail.com",
   phone: "+61493946506",
   github: "https://github.com/WalterYeYint",
-  linkedin: "https://www.linkedin.com/in/walter-yang-9a97b7149/",
+  linkedin: "https://www.linkedin.com/in/ye-yint-thu-9a97b7149/",
   portfolio: "https://walteryeyint.github.io/",
-  about: `A passionate software engineer with extensive experience in AI, Robotics, and Computer Vision. Pursuing a Master of Artificial Intelligence at UTS. Dedicated to building high-quality, scalable systems, and currently specializing in multiple AI agents with tools and LLMs. I bring hands-on experience in MLOps, backend frameworks, and computer vision architectures to the table.`,
+  about: `A software engineer with four years of production experience across AI, robotics and computer vision. I hold a Master of Artificial Intelligence from UTS, completed in November 2025 with Dean's List recognition, and an AWS Machine Learning Engineer Associate certification. My recent work centres on multi-agent LLM systems with tools and retrieval, backed by hands-on experience in MLOps, backend frameworks and computer vision architectures. Sydney-based on a 485 Graduate Visa with full work rights.`,
   
   skills: [
     { 
@@ -57,11 +57,13 @@ const cvData = {
     {
       role: "Software Engineer",
       company: "Qibitech Inc",
-      date: "March 2022 - Present",
+      date: "March 2022 - July 2026",
       resp: [
-        "Develop, test, and maintain multithreaded/asynchronous control systems for warehouse robots and robot arms using C++, Python, ROS & Docker.",
-        "Collaborate in an Agile environment using Jira + Bitbucket.",
-        "Implement and debug features for autonomous systems, including TCP/UDP communication, logging and pathfinding algorithms for robot control/fleet management.",
+        "Developed, tested and maintained multithreaded/asynchronous control systems for warehouse robots and robot arm prototypes using C++, Python, ROS & Docker.",
+        "Contributed to a fleet-management capability that scaled the warehouse robot control system from tens of robots in a single area to 300 robots across multiple areas.",
+        "Designed and implemented the foundation of an intermediary service between the in-house robot control platform and a robotics manufacturer's system, then owned it as it grew into most of the codebase.",
+        "Built embedded concurrency primitives (mutex, semaphore, thread-safe logging) for a robot arm prototype running ESP32 firmware under FreeRTOS.",
+        "Delivered features across the robot control SDK and fleet systems including highway routing, TCP/UDP communication, logging and pathfinding algorithms.",
       ]
     },
     {
@@ -112,7 +114,7 @@ const cvData = {
     {
         "name": "Personal Protective Equipment Detection System",
         "date": "Project",
-        "desc": "The demo link below shows the personal protective equipment detection system. It is implemented using YOLOv8 and hosted on a streamlit platform. The system is able to detect 9 different classes. User can upload desired image/video to detect these classes, or they can use their camera to detect them real-time. (Some latency exists for real-time detection)",
+        "desc": "The demo link below shows the personal protective equipment detection system. It is implemented using YOLOv8 and hosted on a streamlit platform. The system is able to detect 10 different classes. User can upload desired image/video to detect these classes, or they can use their camera to detect them real-time. (Some latency exists for real-time detection)",
         "url": "https://kanyu-ppedetector.streamlit.app/",
         "url_txt": "Link to PPE Detector"
     },
@@ -132,7 +134,7 @@ const cvData = {
         "name": "Analyzing and Visualizing housing data of Penshurst, New South Wales",
         "date": "Project",
         "desc": "The document shows the analysis and visualization of housing data of Penshurst, New South Wales using Microsoft Excel.",
-        "doc": "documents/25422371_A2.pdf"
+        "doc": "documents/25422371_A1.pdf"
     },
     {
         "name": "Online Food Ordering Web-App with Recommendation System",
